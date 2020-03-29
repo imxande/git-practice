@@ -1,10 +1,4 @@
 
-// function wakeUpUser(){
-//     alert('Are you kidding me?');
-// }
-
-// setTimeout(wakeUpUser, 5000);
-
 const word = 'bottles';
 let count = 99;
 
