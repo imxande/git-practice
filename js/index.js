@@ -1,17 +1,13 @@
-
-const word = 'bottles';
-let count = 99;
-
-while(count > 0){
-    console.log(count + ' ' + word + ' of beer on the wall');
-    console.log(count + ' ' + word + ' of beer,');
-    console.log('Take one down pass it around,');
-    count = count - 1;
-
-    if(count > 0){
-        console.log(count + ' ' + word + ' of beer on the wall');
-    }
-    else {
-        console.log('No more'+ word + ' of beer on the wall.');
+function dog(name, weight){
+    if(weight > 20){
+        console.log(`${name} says WOOF WOOF`);
+    } else {
+        console.log(`${name} says woof woof`);
     }
 }
+
+dog('Rover', 23);
+dog('Lady', 17);
+dog('Spot', 13);
+dog('Spike', 53);
+
