@@ -10,7 +10,7 @@ function whatShallIWear(temp){
         console.log('Wear a t-shirt!')
     }
 }
-const doIt = (params) => params = 2;
+const doIt = (params) => params == 2;
 
 let test = 1;
 console.log(doIt(test));
