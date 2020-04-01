@@ -1,17 +1,21 @@
-
-const word = 'bottles';
-let count = 99;
-
-while(count > 0){
-    console.log(count + ' ' + word + ' of beer on the wall');
-    console.log(count + ' ' + word + ' of beer,');
-    console.log('Take one down pass it around,');
-    count = count - 1;
-
-    if(count > 0){
-        console.log(count + ' ' + word + ' of beer on the wall');
+// code magnets
+function whatShallIWear(temp){
+    if(temp < 60){
+        console.log('Wear a jacket!');
     }
+    else if (temp < 70) {
+        console.log('Wear a sweater!');
+    } 
     else {
-        console.log('No more'+ word + ' of beer on the wall.');
+        console.log('Wear a t-shirt!')
     }
 }
+const doIt = (params) => params == 2;
+
+let test = 1;
+console.log(doIt(test));
+console.log(test);
+
+whatShallIWear(50);
+whatShallIWear(60);
+whatShallIWear(80);     
