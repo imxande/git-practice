@@ -1,13 +1,16 @@
-function dog(name, weight){
-    if(weight > 20){
-        console.log(`${name} says WOOF WOOF`);
-    } else {
-        console.log(`${name} says woof woof`);
+// code magnets
+function whatShallIWear(temp){
+    if(temp < 60){
+        console.log('Wear a jacket!');
+    }
+    else if (temp < 70) {
+        console.log('Wear a sweater!');
+    } 
+    else {
+        console.log('Wear a t-shirt!')
     }
 }
 
-dog('Rover', 23);
-dog('Lady', 17);
-dog('Spot', 13);
-dog('Spike', 53);
-
+whatShallIWear(50);
+whatShallIWear(60);
+whatShallIWear(80);     
