@@ -119,4 +119,19 @@ arr[3] = 200;
 console.log(len);
 console.log(number1);
 console.log(arr.join(','));
+console.log('');
+console.log('********************Products**********************');
+
+
+// last
+const products = ['Choo Choo Chocolate', 'Ice Mint', 'Cake Batter', 'Bubblegum'];
+// last item in the array
+const last = products.length - 1;
+
+// most recent created flavor
+const recent = products[last];
+
+console.log(products);
+console.log(recent);
+
 
