@@ -101,4 +101,22 @@ function display(output){
 let clunkCounter = 0;
 thingamajig(5);
 console.log(clunkCounter);
+console.log('');
+
+console.log('******************Length*******************');
+// Arrays
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// length
+let len = arr.length;
+
+// accessing item
+let number1 = arr[3];
+
+// updating item
+arr[3] = 200;
+
+console.log(len);
+console.log(number1);
+console.log(arr.join(','));
 
