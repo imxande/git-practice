@@ -153,3 +153,40 @@ const makePhrases = () => {
 }
 
 makePhrases();
+
+// Back to Bubble Scores
+const scores = [60, 50, 60, 58, 54, 54,
+                58, 50, 52, 54, 48, 69,
+                34, 55, 51, 52, 44, 51,
+                69, 64, 66, 55, 52, 61,
+                46, 31, 57, 52, 44, 18,
+                41, 53, 55, 61, 51, 44];
+
+// report score for each tests
+const report = (results) => {
+    str = '';
+    for (let i = 0; i < results.length; i++){
+        str +=`Bubble solution ${i} score: ${results[i]}\n `;
+    }
+    return str;
+}
+
+// Displays number of tests conducted
+const numberOfTests = (arr) => `Bubbles tests: ${arr.length}`;
+
+// Highest bubble score
+const highestBubbleScore = (arr) => {
+    highestScore = arr[0];
+    str = '';
+    for (let x = 0; x < arr.length; x++){
+        if(arr[x] > highestScore){
+            highestScore = arr[x];
+            str += `Highest bubble score: ${highestScore}`;
+        }
+    }
+    return str;
+}
+
+console.log(report(scores));
+console.log(numberOfTests(scores));
+console.log(highestBubbleScore(scores));
