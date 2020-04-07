@@ -217,13 +217,23 @@ console.log('');
 console.log('********************Report*********************');
 // another way to do the exercise pg 142
 let output;
+let highScore = 0;
 
 // loop 
 for (let i = 0; i < scores.length; i++){
+    //report
     output = 'Bubble solution #' + i + ' score: ' + scores[i];
 
+    // print to the screen
     console.log(output);
-}
 
+    // check each time for highest score
+    if(scores[i] > highScore){
+        highScore = scores[i];
+    }
+}
+// print 
+console.log('Bubbles tests: ' + scores.length);
+console.log('Highest bubble score: ' + highScore);
 
 
