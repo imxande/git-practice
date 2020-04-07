@@ -136,7 +136,7 @@ console.log(recent);
 
 
 console.log('');
-console.log('********************Phrases**********************');
+console.log('********************Report**********************');
 
 // Phrase-o-Matic
 const makePhrases = () => {
@@ -164,9 +164,10 @@ const scores = [60, 50, 60, 58, 54, 54,
 
 // report score for each tests
 const report = (results) => {
-    str = '';
+    // variable
+    let str = '';
     for (let i = 0; i < results.length; i++){
-        str +=`Bubble solution ${i} score: ${results[i]}\n `;
+        str +=`Bubble solution #${i} score: ${results[i]}\n`;
     }
     return str;
 }
@@ -176,8 +177,10 @@ const numberOfTests = (arr) => `Bubbles tests: ${arr.length}`;
 
 // Highest bubble score
 const highestBubbleScore = (arr) => {
-    highestScore = arr[0];
-    str = '';
+    // variables
+    let highestScore = arr[0];
+    let str = '';
+
     for (let x = 0; x < arr.length; x++){
         if(arr[x] > highestScore){
             highestScore = arr[x];
@@ -190,3 +193,37 @@ const highestBubbleScore = (arr) => {
 console.log(report(scores));
 console.log(numberOfTests(scores));
 console.log(highestBubbleScore(scores));
+
+// code magnets
+const hasBubbleGum = [false, false, false, true];
+let i = 0;
+
+// while loop
+while(i < hasBubbleGum.length){
+    if(hasBubbleGum[i]){
+        console.log(products[i] + ' constains bubble gum');
+    }
+    i++;
+}
+
+// for loop
+for(let i = 0; i < hasBubbleGum.length; i++){
+    if(hasBubbleGum[i]){
+        console.log(products[i] + ' constains bubble gum');
+    } 
+}
+
+console.log('');
+console.log('********************Report*********************');
+// another way to do the exercise pg 142
+let output;
+
+// loop 
+for (let i = 0; i < scores.length; i++){
+    output = 'Bubble solution #' + i + ' score: ' + scores[i];
+
+    console.log(output);
+}
+
+
+
