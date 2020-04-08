@@ -135,9 +135,6 @@ console.log(products);
 console.log(recent);
 
 
-console.log('');
-console.log('********************Report**********************');
-
 // Phrase-o-Matic
 const makePhrases = () => {
     let words1 = ['24/7', 'multi-tier', '30,000 foot', 'B-to-B', 'win-win'];
@@ -154,6 +151,8 @@ const makePhrases = () => {
 
 makePhrases();
 
+console.log('');
+console.log('********************Report**********************');
 // Back to Bubble Scores
 const scores = [60, 50, 60, 58, 54, 54,
                 58, 50, 52, 54, 48, 69,
@@ -163,86 +162,35 @@ const scores = [60, 50, 60, 58, 54, 54,
                 41, 53, 55, 61, 51, 44];
 
 // report score for each tests
-const report = (results) => {
-    // variable
-    let str = '';
+const printAndGetHighScore = (results) => {
+    let highscore = 0;
+    let output;
+
     for (let i = 0; i < results.length; i++){
-        str +=`Bubble solution #${i} score: ${results[i]}\n`;
-    }
-    return str;
-}
-
-// Displays number of tests conducted
-const numberOfTests = (arr) => `Bubbles tests: ${arr.length}`;
-
-// Highest bubble score
-const highestBubbleScore = (arr) => {
-    // variables
-    let highestScore = arr[0];
-    let str = '';
-
-    for (let x = 0; x < arr.length; x++){
-        if(arr[x] > highestScore){
-            highestScore = arr[x];
-            str += `Highest bubble score: ${highestScore}`;
+        output = `Bubble solution # ${i} score: ${results[i]}`;
+        console.log(output);
+        
+        if(results[i] > highscore){
+            highscore = results[i];
         }
     }
-    return str;
+    return highscore;
 }
 
-console.log(report(scores));
-console.log(numberOfTests(scores));
-console.log(highestBubbleScore(scores));
+const solHighScore = printAndGetHighScore(scores);
+console.log('Bubbles tests: ' + scores.length)
+console.log('High bubble score: ' + solHighScore);
 
-// code magnets
-const hasBubbleGum = [false, false, false, true];
-let i = 0;
+const getBestResults = (results, highscore) => {
+    let bestSolutions = [];
 
-// while loop
-while(i < hasBubbleGum.length){
-    if(hasBubbleGum[i]){
-        console.log(products[i] + ' constains bubble gum');
+    for(let i = 0; i < results.length; i++){
+        if(results[i] == highscore){
+            bestSolutions.push(i);
+        }
     }
-    i++;
+    return  bestSolutions;
 }
 
-// for loop
-for(let i = 0; i < hasBubbleGum.length; i++){
-    if(hasBubbleGum[i]){
-        console.log(products[i] + ' constains bubble gum');
-    } 
-}
-
-console.log('');
-console.log('********************Report*********************');
-
-// another way to do the exercise pg 142
-let output;
-let highScore = 0;
-let bestSolution = [];
-
-// loop 
-for (let i = 0; i < scores.length; i++){
-    //report
-    output = 'Bubble solution #' + i + ' score: ' + scores[i];
-
-    // print to the screen
-    console.log(output);
-
-    // check each time for highest score
-    if(scores[i] > highScore){
-        highScore = scores[i];
-    }
-}
-
-// for loop to get best solution
-for (let i = 0; i < scores.length; i++){
-    if(scores[i] == highScore){
-        bestSolution.push(i);
-    }
-}
-// print 
-console.log('Bubbles tests: ' + scores.length);
-console.log('Highest bubble score: ' + highScore + '\n' + "Solutions with the highest score: " + bestSolution);
-
-
+const solBestSolution = getBestResults(scores, solHighScore);
+console.log(`Solutions with the highest score: ${solBestSolution}`);
