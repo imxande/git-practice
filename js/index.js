@@ -119,9 +119,9 @@ arr[3] = 200;
 console.log(len);
 console.log(number1);
 console.log(arr.join(','));
+
 console.log('');
 console.log('********************Products**********************');
-
 
 // last
 const products = ['Choo Choo Chocolate', 'Ice Mint', 'Cake Batter', 'Bubblegum'];
@@ -215,6 +215,7 @@ for(let i = 0; i < hasBubbleGum.length; i++){
 
 console.log('');
 console.log('********************Report*********************');
+
 // another way to do the exercise pg 142
 let output;
 let highScore = 0;
