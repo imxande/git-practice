@@ -219,6 +219,7 @@ console.log('********************Report*********************');
 // another way to do the exercise pg 142
 let output;
 let highScore = 0;
+let bestSolution = [];
 
 // loop 
 for (let i = 0; i < scores.length; i++){
@@ -233,8 +234,15 @@ for (let i = 0; i < scores.length; i++){
         highScore = scores[i];
     }
 }
+
+// for loop to get best solution
+for (let i = 0; i < scores.length; i++){
+    if(scores[i] == highScore){
+        bestSolution.push(i);
+    }
+}
 // print 
 console.log('Bubbles tests: ' + scores.length);
-console.log('Highest bubble score: ' + highScore);
+console.log('Highest bubble score: ' + highScore + '\n' + "Solutions with the highest score: " + bestSolution);
 
 
