@@ -194,3 +194,4 @@ const getBestResults = (results, highscore) => {
 
 const solBestSolution = getBestResults(scores, solHighScore);
 console.log(`Solutions with the highest score: ${solBestSolution}`);
+
